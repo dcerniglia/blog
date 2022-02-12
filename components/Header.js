@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function Header() {
 	return (
 		<header>
-			<div className="container mt-12">
+			<div className="container mt-8">
 				<header className="pt-4 pl-4">
 					<h1 className="font-rubik text-7xl text-left">
 						actual
