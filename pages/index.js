@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import Head from 'next/head'
+import Script from 'next/script';
 
 export default function Home({ posts }) {
   console.log(posts);
@@ -12,12 +13,33 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="">
-        <p>Lorem incididunt laboris cillum eiusmod. Dolore laborum velit officia nisi nisi ea ea veniam deserunt voluptate voluptate quis. Et fugiat excepteur qui pariatur minim dolore nisi sit id ipsum incididunt excepteur ea. Et fugiat dolor quis ipsum minim in nulla occaecat nisi do ea. Esse dolore aliquip culpa reprehenderit non dolor ut cillum. Aliquip cillum laboris id sint eu elit commodo deserunt occaecat nisi in sunt commodo ut. Et quis veniam reprehenderit dolore in enim quis consequat dolor commodo anim est. Lorem ex deserunt nulla Lorem irure magna. Deserunt eiusmod exercitation consequat sit proident anim nulla dolor. Laboris tempor sint elit ullamco in qui pariatur ullamco sit ullamco.</p>
+      <main className="mx-8">
+        <ion-icon name="options-outline" size="large"></ion-icon>
+        <h2 className="text-left mt-4 mb-2 font-dosis text-4xl uppercase">
+          post one
+        </h2>
+        <p className="mb-8">Lorem incididunt laboris cillum eiusmod. Dolore laborum velit officia nisi nisi ea ea veniam deserunt voluptate voluptate quis. Et fugiat excepteur qui pariatur minim dolore nisi sit id ipsum incididunt excepteur ea. Et fugiat dolor quis ipsum minim in nulla occaecat nisi do ea. Esse dolore aliquip culpa reprehenderit non dolor ut cillum. Aliquip cillum laboris id sint eu elit commodo deserunt occaecat nisi in sunt commodo ut. Et quis veniam reprehenderit dolore in enim quis consequat dolor commodo anim est. Lorem ex deserunt nulla Lorem irure magna. Deserunt eiusmod exercitation consequat sit proident anim nulla dolor. Laboris tempor sint elit ullamco in qui pariatur ullamco sit ullamco.</p>
+        <ion-icon name="options-outline" size="large"></ion-icon>
+        <h2 className="text-left mt-4 mb-2 font-dosis text-4xl uppercase">
+          another post
+        </h2>
+        <p className="mb-8">Lorem incididunt laboris cillum eiusmod. Dolore laborum velit officia nisi nisi ea ea veniam deserunt voluptate voluptate quis. Et fugiat excepteur qui pariatur minim dolore nisi sit id ipsum incididunt excepteur ea. Et fugiat dolor quis ipsum minim in nulla occaecat nisi do ea. Esse dolore aliquip culpa reprehenderit non dolor ut cillum. Aliquip cillum laboris id sint eu elit commodo deserunt occaecat nisi in sunt commodo ut. Et quis veniam reprehenderit dolore in enim quis consequat dolor commodo anim est. Lorem ex deserunt nulla Lorem irure magna. Deserunt eiusmod exercitation consequat sit proident anim nulla dolor. Laboris tempor sint elit ullamco in qui pariatur ullamco sit ullamco.</p>
+        <ion-icon name="options-outline" size="large"></ion-icon>
+        <h2 className="text-left mt-4 mb-2 font-dosis text-4xl uppercase">
+          here's a title
+        </h2>
+        <p className="mb-8">Lorem incididunt laboris cillum eiusmod. Dolore laborum velit officia nisi nisi ea ea veniam deserunt voluptate voluptate quis. Et fugiat excepteur qui pariatur minim dolore nisi sit id ipsum incididunt excepteur ea. Et fugiat dolor quis ipsum minim in nulla occaecat nisi do ea. Esse dolore aliquip culpa reprehenderit non dolor ut cillum. Aliquip cillum laboris id sint eu elit commodo deserunt occaecat nisi in sunt commodo ut. Et quis veniam reprehenderit dolore in enim quis consequat dolor commodo anim est. Lorem ex deserunt nulla Lorem irure magna. Deserunt eiusmod exercitation consequat sit proident anim nulla dolor. Laboris tempor sint elit ullamco in qui pariatur ullamco sit ullamco.</p>
+        <ion-icon name="options-outline" size="large"></ion-icon>
+        <h2 className="text-left mt-4 mb-2 font-dosis text-4xl uppercase">
+          and finally . . .
+        </h2>
+        <p className="mb-8">Lorem incididunt laboris cillum eiusmod. Dolore laborum velit officia nisi nisi ea ea veniam deserunt voluptate voluptate quis. Et fugiat excepteur qui pariatur minim dolore nisi sit id ipsum incididunt excepteur ea. Et fugiat dolor quis ipsum minim in nulla occaecat nisi do ea. Esse dolore aliquip culpa reprehenderit non dolor ut cillum. Aliquip cillum laboris id sint eu elit commodo deserunt occaecat nisi in sunt commodo ut. Et quis veniam reprehenderit dolore in enim quis consequat dolor commodo anim est. Lorem ex deserunt nulla Lorem irure magna. Deserunt eiusmod exercitation consequat sit proident anim nulla dolor. Laboris tempor sint elit ullamco in qui pariatur ullamco sit ullamco.</p>
       </main>
 
       <footer className="">
       </footer>
+      <Script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></Script>
+      <Script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></Script>
     </div>
   )
 }
@@ -34,7 +56,7 @@ export async function getStaticProps() {
 
     // get frontmatter
     const markdownWithMeta = fs.readFileSync(path.join('posts', filename), 'utf-8');
-  console.log(markdownWithMeta);
+    console.log(markdownWithMeta);
     return {
       slug
     }
