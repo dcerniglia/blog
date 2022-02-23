@@ -1,8 +1,9 @@
 ---
-title: 'Test post'
-date: '22 February 2022'
+title: 'Post Title'
+date: '24 February 2022'
 excerpt: 'This is an excerpt'
 image: '../public/img/posts'
+id: '3'
 ---
 
 ## This is a Post Title

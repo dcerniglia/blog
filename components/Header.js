@@ -21,7 +21,7 @@ export default function Header() {
 							<Link href="/"><a className="font-dosis">Nav Item Two</a></Link>
 						</li>
 						<li className="m-4">
-							<Link href="/"><a className="font-dosis">Nave Item Three</a></Link>
+							<Link href="/"><a className="font-dosis">Nav Item Three</a></Link>
 						</li>
 					</ul>
 				</nav>
